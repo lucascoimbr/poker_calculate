@@ -4,14 +4,17 @@ import game as g
 
 initial_deck = g.complete().deck
 
-hand = ['tc', '6c']
-opened = ['2d', '3d', '4d','5d']
+hand = ['tc', 'qc']
+opened = []
 
 visible = g.visible_cards(hand,opened)
 
+
 deck = g.deck(visible,initial_deck)
 
-cards_straight = g.cards_to_straigh_flush(visible,2,deck)
+# cards_straight = g.cards_to_straigh_flush(visible,2,deck)
 
-print(cards_straight)
+cards_royal_straight = g.cards_to_straigh_flush(visible,deck,royal=True)
+
+print(cards_royal_straight)
 # %%
